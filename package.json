@@ -2,8 +2,11 @@
   "name": "weather-cli",
   "version": "1.0.0",
   "description": "CLI for getting weather",
-  "main": "index.js",
-  "bin": "./index.js",
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js"
+  },
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,13 +16,18 @@
   ],
   "author": "podexus23",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/Podexus23/wether-cli.git",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Podexus23/wether-cli.git"
   },
   "bugs": {
-    "url": "",
+    "url": "https://github.com/Podexus23/wether-cli.git",
     "email": "santon23@gmail.com"
+  },
+  "dependencies": {
+    "axios": "^1.2.1",
+    "chalk": "^5.2.0",
+    "dedent-js": "^1.0.1"
   }
 }
