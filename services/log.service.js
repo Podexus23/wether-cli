@@ -9,7 +9,7 @@ const printSuccess = (msg) => {
 }
 const printHelp = () => {
   console.log(
-    dedent`${chalk.bgYellow(' HELP ')} 
+    dedent`${chalk.bgCyan(' HELP ')} 
     Без параметров - вывод погоды 
     -s [CITY] для установки города
     -h для вывода помощи
@@ -17,4 +17,16 @@ const printHelp = () => {
   )
 }
 
-export { printError, printSuccess, printHelp }
+const printWeather = (res, icon) => {
+  console.log(
+    dedent`${chalk.bgYellow(' WEATHER ')} Погода в городе: ${res.name}
+    ${icon} ${res.weather[0].description}
+    Температура: ${res.main.temp}
+    Ощущается как: ${res.main.feels_like}
+    Влажность: ${res.main.humidity}%
+    Скорость ветра: ${res.wind.speed}
+    `
+  )
+}
+
+export { printError, printSuccess, printHelp, printWeather }
